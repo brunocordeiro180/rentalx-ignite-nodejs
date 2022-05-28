@@ -1,4 +1,4 @@
-import { Category } from "../../model/Category";
+import { Category } from "../../entities/Category";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 class ListCategoriesUseCase {
@@ -7,7 +7,7 @@ class ListCategoriesUseCase {
         this.categoriesRepository = categoriesRepository;
     }
 
-    execute(): Category[] {
+    execute(): Promise<Category[]> {
         return this.categoriesRepository.list();
     }
 }
