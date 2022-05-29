@@ -3,11 +3,11 @@ import express, { request } from 'express'
 import "express-async-errors"
 import swaggerui from 'swagger-ui-express';
 
-import { router } from './routes';
-import swaggerFile from "./swagger.json";
-import "./shared/container"
-import "./database"
-import { AppError } from "./errors/AppError";
+import { router } from '@shared/infra/http/routes';
+import swaggerFile from "../../../swagger.json";
+import "@shared/container"
+import "@shared/infra/typeorm"
+import { AppError } from "@shared/errors/AppError";
 
 const app = express()
 
