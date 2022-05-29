@@ -1,0 +1,5 @@
+class UpdateUserAvatarController {
+
+}
+
+export { UpdateUserAvatarController }
